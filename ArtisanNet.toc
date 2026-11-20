@@ -6,6 +6,7 @@
 ## SavedVariables: ArtisanNetDB
 ## IconTexture: Interface\AddOns\ArtisanNet\Media\Icon
 ## X-Curse-Project-ID: 1785158
+## X-Wago-ID: 56nbZp69
 
 Core.lua
 Professions.lua
