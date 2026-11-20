@@ -1,0 +1,22 @@
+## Interface: 16001
+## Title: |cff33d1bdArtisan|r Network
+## Notes: Share your professions with other Artisan Network users, see who is online, and find a crafter fast.
+## Author: scryptik
+## Version: 1.6.7
+## SavedVariables: ArtisanNetDB
+## IconTexture: Interface\AddOns\ArtisanNet\Media\Icon
+## X-Curse-Project-ID: 1785158
+
+Core.lua
+Professions.lua
+Comm.lua
+Crafting.lua
+Widgets.lua
+UI.lua
+UI\Search.lua
+UI\Players.lua
+UI\Mine.lua
+UI\Watch.lua
+UI\Requests.lua
+UI\Settings.lua
+Extras.lua
