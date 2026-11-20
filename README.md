@@ -58,6 +58,3 @@ Copy the `ArtisanNet` folder into your client's `Interface/AddOns/` folder, then
 - **Download:** [CurseForge](https://www.curseforge.com/wow/addons/artisan-network)
 - **Website:** https://scryptik-nunya.github.io/artisan/
 - **Bugs, feedback & test builds:** [The Forge Discord](https://discord.gg/yskDeZjQj7)
-
-## Releasing
-Releases are built and uploaded automatically by the [BigWigs packager](https://github.com/BigWigsMods/packager). Update `## Version:` in `ArtisanNet.toc`, add a `## vX.Y.Z` section at the top of `CHANGELOG.md`, commit, and push a tag with the version number (e.g. `1.6.8`). That section becomes the CurseForge changelog for the upload.
