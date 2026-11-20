@@ -56,5 +56,5 @@ Copy the `ArtisanNet` folder into your client's `Interface/AddOns/` folder, then
 
 ## Links
 - **Download:** [CurseForge](https://www.curseforge.com/wow/addons/artisan-network)
-- **Website:** https://scryptik-nunya.github.io/artisan/
+- **Website:** https://theforge-wow.github.io/artisan/
 - **Bugs, feedback & test builds:** [The Forge Discord](https://discord.gg/yskDeZjQj7)
