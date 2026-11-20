@@ -1,0 +1,40 @@
+name: Package and release
+
+# Runs when a version tag is pushed, e.g. 1.2.5
+on:
+  push:
+    tags:
+      - "*"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    env:
+      CF_API_KEY: ${{ secrets.CF_API_KEY }}
+      WAGO_API_TOKEN: ${{ secrets.WAGO_API_TOKEN }}
+      GITHUB_OAUTH: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - name: Check out the addon
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Pull this version's notes from CHANGELOG.md
+        run: |
+          VERSION="${GITHUB_REF_NAME#v}"
+          awk -v v="$VERSION" '
+            /^## v/ { if (found) exit; if (index($0, "## v" v " ") == 1 || $0 == "## v" v) found = 1 }
+            found
+          ' CHANGELOG.md > RELEASE_NOTES.md
+          if [ ! -s RELEASE_NOTES.md ]; then
+            echo "::error::No '## v$VERSION' section found at the top of CHANGELOG.md"
+            exit 1
+          fi
+          cat RELEASE_NOTES.md
+
+      - name: Package and upload (CurseForge, Wago, GitHub release)
+        uses: BigWigsMods/packager@v2

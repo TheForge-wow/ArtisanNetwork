@@ -1,0 +1,11 @@
+package-as: ArtisanNet
+
+manual-changelog:
+  filename: RELEASE_NOTES.md
+  markup-type: markdown
+
+ignore:
+  - .github
+  - .pkgmeta
+  - .gitignore
+  - RELEASE_NOTES.md
